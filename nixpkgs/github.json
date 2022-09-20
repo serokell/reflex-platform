@@ -1,7 +1,7 @@
 {
-  "owner": "nixos",
+  "owner": "serokell",
   "repo": "nixpkgs",
-  "branch": "release-19.09",
-  "rev": "49550f29cd9d6ed27f4a76ba3c3fe30edf882eb7",
-  "sha256": "003fpkrcc5mw33q670q4z865zpr430cllbxhyzj8k9p4hbc8yqda"
+  "branch": "rvem/kiln-darwin-nixpkgs-fix",
+  "rev": "32a8b0ea5f40581ba6e9b7155b4f0b547a9c7357",
+  "sha256": "1pjy7jhzkx38swv786pmkn9hrkr8zjkv5pd7mhh5j5brmajsp59y"
 }
