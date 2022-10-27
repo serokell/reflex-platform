@@ -1,7 +1,7 @@
 {
   "owner": "serokell",
   "repo": "nixpkgs",
-  "branch": "rvem/kiln-darwin-nixpkgs-fix",
-  "rev": "32a8b0ea5f40581ba6e9b7155b4f0b547a9c7357",
-  "sha256": "1pjy7jhzkx38swv786pmkn9hrkr8zjkv5pd7mhh5j5brmajsp59y"
+  "branch": "rvem/kiln-darwin-nixpkgs-fix-1",
+  "rev": "fbc888e2bba3b98d214665f1ea26c1aeda26d793",
+  "sha256": "13gr047hwr08ha5f69p48nfwslpga3n9xz0mwwqb8f2qg3mbywsj"
 }

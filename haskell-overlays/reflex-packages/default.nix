@@ -59,7 +59,7 @@ in
       # Show some output while running tests, so we might notice what's wrong
       testTarget = "--show-details=streaming";
 
-      testHaskellDepends = with self; (drv.testHaskellDepends or []) ++ stdenv.lib.optionals (!noGcTest) [
+      testHaskellDepends = with self; (drv.testHaskellDepends or []) ++ lib.optionals (!noGcTest) [
         temporary
         jsaddle-warp
         process
@@ -68,11 +68,11 @@ in
 
       testSystemDepends = with nixpkgs; (drv.testSystemDepends or []) ++ [
         selenium-server-standalone which
-      ] ++ stdenv.lib.optionals (!noGcTest) [
+      ] ++ lib.optionals (!noGcTest) [
         chromium
         nixpkgs.iproute
       ];
-    } // stdenv.lib.optionalAttrs (!noGcTest) {
+    } // lib.optionalAttrs (!noGcTest) {
       # The headless browser run as part of gc tests would hang/crash without this
       preCheck = ''
         export FONTCONFIG_PATH=${nixpkgs.fontconfig.out}/etc/fonts
@@ -86,7 +86,7 @@ in
     ])) {})
     (drv: {
       # Hack until https://github.com/NixOS/cabal2nix/pull/432 lands
-      libraryHaskellDepends = (drv.libraryHaskellDepends or []) ++ stdenv.lib.optionals (with stdenv.hostPlatform; isAndroid && is32bit) [
+      libraryHaskellDepends = (drv.libraryHaskellDepends or []) ++ lib.optionals (with stdenv.hostPlatform; isAndroid && is32bit) [
         self.android-activity
       ];
     });
